@@ -8,6 +8,7 @@
   Submit your comments below.<br>
   <div style="width: 300px;">
     <form action="/" method="post" style="text-align: right;">
+      <input type="hidden" name="_csrf_token" value={ Plug.CSRFProtection.get_csrf_token() }>
       <label for="comment">Comment:</label><textarea rows="4" cols="30" name="comment" id="comment"></textarea><br>
       <label for="author">Author:</label><br><input type="text" name="author" id="author"><br>
       <button style="margin-top: 5px; border: solid 1px; background-color: #dddddd; padding: 3px;" type="submit">Submit</button>
