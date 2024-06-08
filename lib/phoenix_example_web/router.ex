@@ -18,6 +18,8 @@ defmodule PhoenixExampleWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    post "/", PageController, :post
   end
 
   # Other scopes may use custom stacks.

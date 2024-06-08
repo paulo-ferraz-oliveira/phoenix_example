@@ -16,6 +16,11 @@
   </div>
   <br>
   <strong>Previous comments</strong><br>
-  <div id="comments"></div>
+  <div id="comments">
+    <%= for comment <- PhoenixExample.Comment.all do %>
+      <p><%= comment.author %> @ <%= comment.inserted_at %> wrote:</p>
+      <p><%= comment.comment %></p><br>
+    <% end %>
+  </div>
 </body>
 </html>
