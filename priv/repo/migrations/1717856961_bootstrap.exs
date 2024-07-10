@@ -1,12 +1,12 @@
-defmodule PhoenixExample.Migrations.Boostrap do
+defmodule PhoenixExample.Repo.Migrations.Boostrap do
   use Ecto.Migration
 
-  def up do
-    create table("comment") do
+  def change do
+    create table(:comment) do
       add :author, :string
       add :comment, :string
 
-      timestamps()
+      timestamps(type: :utc_datetime)
     end
   end
 end

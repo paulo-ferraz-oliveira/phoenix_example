@@ -10,7 +10,7 @@ defmodule PhoenixExampleWeb.PageController do
   end
 
   def post(conn, params) do
-    Comment.insert(params["comment"], params["author"])
+    Comment.insert(params)
     render(conn, :home, layout: false)
   end
 end
